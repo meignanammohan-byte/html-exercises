@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Call app UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color:white;
+    }
+    .left-panel {
+      width: 250px;
+      background-color: white;
+      float: left;
+      height: 100vh;
+      border-right: 1px solid #ddd;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .left-panel h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .menu-item {
+      padding: 8px 0;
+      cursor: pointer;
+      color: #444;
+    }
+    .menu-item:hover {
+      background-color: white;
+    }
+    .dialpad {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .dialpad p {
+      font-size: 12px;
+      color: gray;
+    }
+    .dialpad button {
+      width: 60px;
+      height: 40px;
+      margin: 4px;
+      border: black;
+      background-color: gray;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .dialpad button:hover {
+      background-color: white;
+    }
+    .main {
+      margin-left: 270px;
+      padding: 20px;
+    }
+
+    .header {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .header h2 {
+      float: left;
+      color: #333;
+      margin: 0;
+    }
+    .header-buttons {
+      float: right;
+    }
+    .header-buttons button {
+      background-color: white;
+      border: none;
+      padding: 8px 15px;
+      margin-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .header-buttons button:hover {
+      background-color: white;
+    }
+    .contact-group {
+      margin-top: 25px;
+    }
+
+    .group-title {
+      font-size: 16px;
+      color: gray;
+      margin-bottom: 10px;
+    }
+
+    .contact-card {
+      display: inline-block;
+      width: 250px;
+      height: 100px;
+      background-color: white;
+      border-radius: 8px;
+      margin: 10px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+      vertical-align: top;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .contact-card .top {
+      height: 60%;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    .contact-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .contact-role {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .status {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .available { background-color:greenyellow; }
+    .away { background-color: yellow; }
+    .dnd { background-color:red; }
+    .offline { background-color:gray; }
+
+    .icons {
+      margin-top: 10px;
+    }
+    .icons i {
+      margin-right: 10px;
+      color: gray;
+      cursor: pointer;
+    }
+    .icons i:hover {
+      color:black;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-panel">
+    <h3>Calls</h3>
+    <div class="menu-item">Speed dial</div>
+    <div class="menu-item">Contacts</div>
+    <div class="menu-item">History</div>
+    <div class="menu-item">Voicemail</div>
+    <div class="dialpad">
+      <p>Your number: (425) 655-0899</p>
+      <div>
+        <button>1</button><button>2</button><button>3</button><br>
+        <button>4</button><button>5</button><button>6</button><br>
+        <button>7</button><button>8</button><button>9</button><br>
+        <button>*</button><button>0</button><button>#</button><br>
+        <button style="width:190px;margin-top:8px;">Call</button>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="header">
+      <h2>Speed dial</h2>
+      <div class="header-buttons">
+        <button><i class="fa-solid fa-plus"></i> Add speed dial</button>
+        <button><i class="fa-solid fa-users"></i> New group</button>
+        <button><i class="fa-solid fa-phone"></i> Parked calls</button>
+      </div>
+    </div>
+
+    <div class="contact-group">
+      <div class="group-title">Speed dial</div>
+
+      <div class="contact-card">
+        <div class="top">
+          <div class="circle"><i class="fa-solid fa-user"></i></div>
+          <div class="contact-info">
+            <div class="contact-name">Alex Wilber</div>
+            <div class="contact-role">Marketing Assistant</div>
+          </div>
+        </div>
+        <div class="icons">
+          <span class="status available"></span> Available
+          <div style="float:right;">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="top">
+          <div class="circle"><i class="fa-solid fa-user"></i></div>
+          <div class="contact-info">
+            <div class="contact-name">Debra Berger</div>
+            <div class="contact-role">Administrative Assistant</div>
+          </div>
+        </div>
+        <div class="icons">
+          <span class="status available"></span> Available
+          <div style="float:right;">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-group">
+      <div class="group-title">Other Contacts</div>
+
+      <div class="contact-card">
+        <div class="top">
+          <div class="circle"><i class="fa-solid fa-user"></i></div>
+          <div class="contact-info">
+            <div class="contact-name">Christie Cline</div>
+            <div class="contact-role">Buyer</div>
+          </div>
+        </div>
+        <div class="icons">
+          <span class="status available"></span> Available
+          <div style="float:right;">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="top">
+          <div class="circle"><i class="fa-solid fa-user"></i></div>
+          <div class="contact-info">
+            <div class="contact-name">Grady Archie</div>
+            <div class="contact-role">Designer</div>
+          </div>
+        </div>
+        <div class="icons">
+          <span class="status dnd"></span> In a call
+          <div style="float:right;">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
